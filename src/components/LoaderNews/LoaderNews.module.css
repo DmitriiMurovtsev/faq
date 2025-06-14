@@ -1,0 +1,40 @@
+.loader {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.img {
+    height: 400px;
+    background-color: rgb(180, 180, 180);
+    animation: fadeInOut 1s infinite alternate;
+}
+
+.title {
+    height: 25px;
+    background-color: rgb(180, 180, 180);
+    animation: fadeInOut 1s infinite alternate;
+}
+
+.text {
+    height: 50px;
+    background-color: rgb(180, 180, 180);
+    animation: fadeInOut 1s infinite alternate;
+}
+
+.link {
+    height: 10px;
+    background-color: rgb(180, 180, 180);
+    animation: fadeInOut 1s infinite alternate;    
+}
+
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0.5; /* Начальная прозрачность */
+    }
+    100% {
+        opacity: 0.8; /* Конечная прозрачность */
+    }
+}
+

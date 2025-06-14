@@ -1,0 +1,114 @@
+.title,
+.content {
+    display: flex;
+    gap: 10px;
+}
+
+.icon {
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+.icon:active {
+    position: relative;
+    top: 1px;
+}
+
+.icons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.videos,
+.audios,
+.files,
+.fileContainer {
+    display: flex;
+    flex-direction: column;
+}
+.videos {
+    gap: 25px;
+}
+.fileContainer {
+    gap: 25px;
+}
+
+.subTitle {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: rgb(50, 50, 50);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.subTitle img {
+    position: relative;
+    top: 2px;
+}
+
+.subContent {
+    width: 100%;
+}
+
+.subTitleName {
+    flex-grow: 1;
+}
+
+.videoContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.iconsFile {
+    display: flex;
+    gap: 10px;
+}
+
+.file {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 5px 0;
+}
+.file:hover {
+    background-color: rgb(0, 128, 0, 0.05);
+}
+.file img,
+.audioContainer img {
+    width: 20px;
+}
+.file a {
+    flex-grow: 1;
+}
+
+.fileName {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    text-decoration: none;
+    color: rgb(50, 50, 50);
+    position: relative;
+}
+.fileName:hover {
+    color: green;
+}
+
+.audioName {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: rgb(50, 50, 50);
+    display: flex;
+}
+.audioName div {
+    flex-grow: 1;
+}
+
+.audioContainer {
+    padding: 5px 0;
+}
+

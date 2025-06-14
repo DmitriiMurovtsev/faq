@@ -1,0 +1,48 @@
+.popUpBody {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.popUpTitle {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.popUpTitle select {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid gray;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.popUp {
+    background-color: white;
+    z-index: 2;
+    padding: 10px;
+    box-shadow: 0 0 5px 0 gray;
+    border-radius: 3px;   
+    width: calc(150px + (280 - 150) * ((100vw - 320px) / (1880 - 320)));
+}
+
+.icons {
+    display: flex;
+    justify-content: end;
+    gap: 25px;
+}
+.icons img {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+.icons img:active {
+    position: relative;
+    top: 1px;
+}
+
+.popUp.mobile {
+    width: 240px;
+}

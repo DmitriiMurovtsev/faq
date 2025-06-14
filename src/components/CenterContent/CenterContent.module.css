@@ -1,0 +1,62 @@
+.centerContent {
+    display: flex;    
+    flex-direction: column;
+    gap: 50px;    
+    height: calc(100vh - 150px);
+    position: relative;
+    bottom: calc(35px + (60 - 35) * ((100vw - 320px) / (1880 - 320)));
+    width: calc(270px + (800 - 270) * ((100vw - 320px) / (1880 - 320)));
+    background-color: white;
+    box-shadow: 0 0 10px 0 gray;
+    padding: calc(10px + (25 - 15) * ((100vw - 320px) / (1880 - 320)));
+    padding-bottom: 30px;
+    overflow-y: auto;
+}
+
+/* Ширина скроллбара */
+.centerContent::-webkit-scrollbar {
+    width: 8px; 
+}
+
+/* Цвет фона трека скроллбара */
+.centerContent::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Цвет ползунка скроллбара */
+.centerContent::-webkit-scrollbar-thumb {
+    background: rgba(122,184,128,1);
+}
+
+/* Цвет ползунка скроллбара при наведении */
+.centerContent::-webkit-scrollbar-thumb:hover {
+    background: rgb(0, 88, 0);
+}
+
+@media (max-width: 768px) {
+    .centerContent {
+        width: 80%;
+        margin: auto;
+    }
+}
+
+@media (max-width: 425px) {
+    .centerContent {
+        margin: auto;
+        width: 80%;
+    }
+}
+
+@media (max-width: 375px) {
+    .centerContent {
+        margin: auto;
+        width: 80%;
+    }
+}
+
+@media (max-width: 320px) {
+    .centerContent {
+        width: 90%;
+        margin: auto;
+    }
+}

@@ -1,0 +1,99 @@
+.tag {
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    box-shadow: 0 0 4px 0 gray;
+    width: fit-content;
+    padding: 5px 15px 5px 15px;
+    background-color: white;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    text-wrap: nowrap;
+}
+.tag:active {
+    position: relative;
+    top: 1px;
+}
+
+.tag::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: 3px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: inset 0 0 2px 0 gray;
+    background-color: #F5F6FA;
+}
+
+.tag img {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    right: 0px;    
+    top: 0px;
+    display: none;
+    background-color: white;
+}
+.tag:hover img {
+    display: block;
+}
+
+.tags {
+    padding: 50px 100px 50px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 300px;
+}
+.imgIcon {
+    width: 25px;
+    cursor: pointer;
+}
+.imgIcon:active {
+    position: relative;
+    top: 1px;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    display: flex;
+    gap: 10px;
+}
+
+.subTitle {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+.formAdd {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.icons {
+    display: flex;
+    justify-content: end;
+    gap: 25px;
+}
+.icons img {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+.icons img:active {
+    position: relative;
+    top: 1px;
+}
+
+.tagsList {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}

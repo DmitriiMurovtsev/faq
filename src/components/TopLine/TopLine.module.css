@@ -1,0 +1,50 @@
+.topLine {
+    height: calc(50px + (80 - 50) * ((100vw - 320px) / (1880 - 320)));
+    background: rgb(255,255,255);
+    background: linear-gradient(166deg, rgba(255,255,255,1) 0%, rgba(122,184,128,1) 29%, rgba(210,247,214,1) 59%, rgba(114,191,122,1) 100%);
+    padding-left: calc(10px + (30 - 10) * ((100vw - 320px) / (1880 - 320)));
+    display: flex;
+    align-items: center;
+    user-select: none;
+}
+
+.logo {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.logo img {
+    height: calc(25px + (50 - 25) * ((100vw - 320px) / (1880 - 320)));
+    position: relative;
+}
+
+.names {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logoName {
+    font-size: calc(16px + (30 - 16) * ((100vw - 320px) / (1880 - 320)));
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.logoSubName {
+    font-size: calc(10px + (14 - 10) * ((100vw - 320px) / (1880 - 320)));
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        display: none;
+    }
+}
+
+@media (max-width: 425px) {}
+
+@media (max-width: 375px) {}
+
+@media (max-width: 320px) {}

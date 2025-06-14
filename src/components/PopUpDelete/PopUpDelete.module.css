@@ -1,0 +1,35 @@
+.popUpBody {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white;
+    box-shadow: 0 0 5px 0 red;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.popUpTitle,
+.popUpTitleName {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;    
+}
+.popUpTitle {
+    font-size: 14px;
+    color: red;    
+}
+
+.icons {
+    display: flex;
+    justify-content: end;
+    gap: 25px;
+}
+.icons img {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+.icons img:active {
+    position: relative;
+    top: 1px;
+}

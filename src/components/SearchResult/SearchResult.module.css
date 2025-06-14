@@ -1,0 +1,52 @@
+.searchText {
+    background-color: rgb(255, 255, 0);
+}
+
+.search {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-bottom: 1px solid rgb(200, 200, 200);
+    padding: 0 0 25px 0;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: 700;
+    color: rgb(50, 50, 50);
+}
+
+.content {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+.more {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: rgb(1, 77, 1);
+    width: fit-content;
+    padding: 0 0 5px 0;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    text-decoration: none;
+    align-self: flex-end;
+}
+
+.more::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: green;
+    transition: width 0.3s;
+}
+
+.more:hover::before {
+    width: 100%;
+}

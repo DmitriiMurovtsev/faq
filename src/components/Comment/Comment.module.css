@@ -1,0 +1,28 @@
+.comment,
+.miniComment {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    box-shadow: 0 0 5px 0 gray;
+    border-radius: 3px;
+    background-color: white;
+    padding: 10px;
+    position: relative;
+    font-size: 14px;
+}
+
+.owner,
+.dateTime {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: gray;
+    display: flex;
+}
+
+.dateTime {    
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    color: #000;
+}

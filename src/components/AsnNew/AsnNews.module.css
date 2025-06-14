@@ -1,0 +1,67 @@
+.asnNew {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.asnNew img {
+    width: 100%;
+}
+
+.date {
+    position: absolute;
+    top: 20px;
+    left: calc(-5px + (-10 + 5) * ((100vw - 320px) / (1880 - 320)));
+    background-color: white;
+    font-size: 12px;
+    padding: 5px 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    box-shadow: 0 0 5px 0 gray;
+    color: gray;
+}
+
+.title {
+    font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1880 - 320)));
+    font-weight: 700;
+    color: rgb(50, 50, 50);
+}
+
+.content {
+    font-size: calc(11px + (14 - 11) * ((100vw - 320px) / (1880 - 320)));
+    letter-spacing: 0.5px;
+}
+
+.link {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.link a {
+    font-size: calc(10px + (12 - 10) * ((100vw - 320px) / (1880 - 320)));
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: rgb(1, 77, 1);
+    width: fit-content;
+    padding: 0 0 5px 0;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    text-decoration: none;
+}
+
+.link a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: green;
+    transition: width 0.3s;
+}
+
+.link a:hover::before {
+    width: 100%;
+}

@@ -1,0 +1,202 @@
+.leftMenu {
+    display: flex;
+    flex-direction: column;
+    gap: calc(10px + (25 - 10) * ((100vw - 320px) / (1880 - 320)));  
+
+    padding-left: calc(10px + (30 - 10) * ((100vw - 320px) / (1880 - 320)));
+    padding-top: calc(10px + (20 - 10) * ((100vw - 320px) / (1880 - 320)));
+    padding-right: calc(10px + (30 - 10) * ((100vw - 320px) / (1880 - 320)));
+
+}
+
+.menu {
+    width: calc(150px + (300 - 150) * ((100vw - 320px) / (1880 - 320)));
+    display: flex;
+    flex-direction: column;
+    gap: calc(10px + (25 - 10) * ((100vw - 320px) / (1880 - 320)));    
+
+    /* height: calc(100vh - 200px); */
+    /* overflow-y: auto; */
+
+}
+
+.title img {
+    width: calc(20px + (25 - 20) * ((100vw - 320px) / (1880 - 320)));
+    height: calc(20px + (25 - 20) * ((100vw - 320px) / (1880 - 320)));
+    cursor: pointer;
+}
+
+.title img:active {
+    position: relative;
+    top: 1px;
+}
+
+.title {
+    display: flex;
+    gap: 10px;
+}
+
+.titleName {
+    font-size: calc(12px + (18 - 12) * ((100vw - 320px) / (1880 - 320)));
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.menuList {
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.elementMenu,
+.article {
+    font-size: calc(11px + (14 - 11) * ((100vw - 320px) / (1880 - 320)));
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-wrap: nowrap;
+    user-select: none;
+    padding: 5px 0;
+    border-top: 1px solid gray;
+    display: flex; 
+    cursor: pointer;   
+    position: relative;
+}
+.elementMenu:last-child,
+.article:last-child {
+    border-bottom: 1px solid gray;
+}
+
+.name {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.name div {
+    font-size: 10px;
+}
+
+.count {
+    background-color: white;
+    border: 1px solid gray;
+    width: 30px;
+    display: flex;
+    border-radius: 5px;
+    justify-content: center;
+    font-size: calc(10px + (12 - 10) * ((100vw - 320px) / (1880 - 320)));
+}
+.article {
+    position: relative;
+}
+
+
+.article:hover {
+    color: green;
+}
+
+.subElements {    
+    margin-left: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.popUpContainer {
+    position: relative;
+}
+
+.icons {
+    display: none;
+    gap: 10px;
+    margin-left: 10px;    
+    position: absolute; 
+    right: 0;
+    background-color: #F5F6FA;
+}
+.icons img {
+    width: calc(16px + (20 - 16) * ((100vw - 320px) / (1880 - 320)));
+    height: calc(16px + (20 - 16) * ((100vw - 320px) / (1880 - 320)));
+}
+.icons img:active {
+    position: relative;
+    top: 1px;
+}
+
+.elementMenu:hover .icons,
+.article:hover .icons {
+    display: flex;
+}
+.elementMenu:hover .count,
+.article:hover .count {
+    display: none;
+}
+.elementMenu:hover .count.fixCount,
+.article:hover .count.fixCount {
+    display: flex;
+}
+
+.textError {
+    position: relative;
+    top: -20px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: red;
+}
+
+.articleActice,
+.elementMenuActice {
+    font-weight: 700;
+}
+
+
+/* Ширина скроллбара */
+.menuList::-webkit-scrollbar {
+    width: 8px; 
+}
+
+/* Цвет фона трека скроллбара */
+.menuList::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Цвет ползунка скроллбара */
+.menuList::-webkit-scrollbar-thumb {
+    background: rgba(122,184,128,1);
+}
+
+/* Цвет ползунка скроллбара при наведении */
+.menuList::-webkit-scrollbar-thumb:hover {
+    background: rgb(0, 88, 0);
+}
+
+@media (max-width: 768px) {
+    .leftMenu {
+        display: none;
+    }
+}
+
+@media (max-width: 425px) {}
+
+@media (max-width: 375px) {}
+
+@media (max-width: 320px) {}
+
+.mobile {
+    display: flex;
+    width: 100%;
+    padding: 0;    
+}
+
+.mobile .menu {
+    width: 100%;
+}
+
+.mobile .menuList {
+    height: calc(100vh - 200px);
+    width: 260px;
+    top: 230px;    
+}

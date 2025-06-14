@@ -1,0 +1,57 @@
+.container {
+    /* position: fixed; */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;  
+    width: 260px;
+}
+
+.iconClose {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.navigate {    
+    padding: 10px 0;
+}
+
+.title {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    color: black;   
+    
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.title img {
+    width: 25px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;      
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-bottom: 1px solid gray;      
+}
+.menu a:last-child {
+    border: none;
+}
+
+.iconUp {
+    transform: rotate(-90deg);
+}
+.iconDown {
+    transform: rotate(90deg);
+}
