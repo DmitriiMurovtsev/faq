@@ -40,11 +40,12 @@ function TopMenu({ setTextSearch, searchArticles, textError, openMenu, setOpenMe
                 />
             </div>
 
-            <div ref={menuRef} className={openMenu ? `${style.menu} ${style.flex}` : style.menu}>
+            <div ref={menuRef} className={openMenu ? `${style.menu} ${style.flex}` : style.menu}>                
                 <a className={style.topMenuA} href="https://app.insfamily.ru/faq/index/">Главная</a>
-                <a className={style.topMenuA} href="https://app.insfamily.ru/faq/index/">Тестирования</a>
+                {/* <a className={style.topMenuA} href="https://app.insfamily.ru/faq/index/">Тестирования</a> */}
                 <a className={style.topMenuA} href="/" target="blank_">СРМ</a>
                 <a className={style.topMenuA} href="https://insfamily.ru/" target="blank_">Наш сайт</a>
+                <a className={style.topMenuA} href="https://app.insfamily.ru/j/logout/">Выход</a>
             </div>
 
         </div>

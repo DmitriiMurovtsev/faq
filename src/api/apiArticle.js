@@ -1,27 +1,16 @@
-import { apiHost, headers } from "./apiSetting";
-import axios from "axios";
+import { api } from "./apiSetting";
 
 
 // получает статью
 async function getArticle(id) {
-    try {
-        const response = await axios(`${apiHost}article/${id}/`, {headers: headers});
-        return response;
-
-    } catch (error) {
-        return error.response;
-    };
+    const response = await api(`/faq/article/${id}/`);
+    return response;
 };
 
 // поиск по статьям
 async function searchForArticle(text) {
-    try {
-        const response = await axios(`${apiHost}article/?search=${text}`, {headers: headers});
-        return response;
-
-    } catch (error) {
-        return error.response;
-    };
+    const response = await api(`/faq/article/?search=${text}`);
+    return response;
 };
 
 // редактирует статью - заголовок и содержание
@@ -31,13 +20,8 @@ async function editArticle(id, name = null, content = null) {
     name && (body['name'] = name);
     content && (body['content'] = content);
 
-    try {
-        const response = await axios.patch(`${apiHost}article/${id}/`, body, {headers: headers});
-        return response;
-
-    } catch (error) {
-        return error.response;
-    };
+    const response = await api.patch(`/faq/article/${id}/`, body);
+    return response;
 };
 
 

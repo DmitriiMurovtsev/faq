@@ -1,11 +1,10 @@
-import { apiHost, headers } from "./apiSetting";
-import axios from "axios";
+import { api } from "./apiSetting";
 
 
 // получает массив аудио по статье
 async function getFiles(article_id) {
     try {
-        const response = await axios(`${apiHost}ffa/?article=${article_id}`, {headers: headers});
+        const response = await api(`/faq/ffa/?article=${article_id}`);
         return response;
 
     } catch (error) {
@@ -21,31 +20,20 @@ async function createFile(item, article_id, setProgress) {
     formData.append('file', item);
     formData.append('article', article_id);
 
-    try {
-        const response = await axios.post(`${apiHost}ffa/`, formData, 
+    const response = await api.post(`/faq/ffa/`, formData, 
         {
-            headers: headers,
             onUploadProgress: progressEvent => {
                 const percentCompleted = Math.round((progressEvent.loaded * 100) / progressEvent.total);
                 setProgress(percentCompleted);
             },
         });
-        return response;
-
-    } catch (error) {
-        return error.response;
-    };
+    return response;
 };
 
 // удаляет файл
 async function deleteFile(file_id) {
-    try {
-        const response = await axios.delete(`${apiHost}ffa/${file_id}/`, {headers: headers});
-        return response;
-
-    } catch (error) {
-        return error.response;
-    };
+    const response = await api.delete(`/faq/ffa/${file_id}/`);
+    return response;
 };
 
 

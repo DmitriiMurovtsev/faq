@@ -1,16 +1,10 @@
-import { apiHost, headers } from "./apiSetting";
-import axios from "axios";
+import { api } from "./apiSetting";
 
 
 // получает массив аудио по статье
 async function getVideos(article_id) {
-    try {
-        const response = await axios(`${apiHost}vf/?article=${article_id}`, {headers: headers});
-        return response;
-
-    } catch (error) {
-        return error.response;
-    };
+    const response = await api(`/faq/vf/?article=${article_id}`);
+    return response;
 };
 
 // добавляет видео
@@ -21,31 +15,20 @@ async function createVideo(item, article_id, setProgress) {
     formData.append('file', item);
     formData.append('article', article_id);
 
-    try {
-        const response = await axios.post(`${apiHost}vf/`, formData, 
+    const response = await api.post(`/faq/vf/`, formData, 
         {
-            headers: headers,
             onUploadProgress: progressEvent => {
                 const percentCompleted = Math.round((progressEvent.loaded * 100) / progressEvent.total);
                 setProgress(percentCompleted);
             },
         });
-        return response;
-
-    } catch (error) {
-        return error.response;
-    };
+    return response;
 };
 
 // удаляет видео
 async function deleteVideo(video_id) {
-    try {
-        const response = await axios.delete(`${apiHost}vf/${video_id}/`, {headers: headers});
-        return response;
-
-    } catch (error) {
-        return error.response;
-    };
+    const response = await api.delete(`/faq/vf/${video_id}/`);
+    return response;
 };
 
 
